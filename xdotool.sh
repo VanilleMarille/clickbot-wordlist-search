@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $1 = bar ]; then
-	xdotool mousemove 598 56
+	xdotool mousemove 467 15
 	xdotool click 1
 	sleep 3
 	xdotool key Control_L+l
