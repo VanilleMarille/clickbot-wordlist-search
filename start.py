@@ -3,6 +3,8 @@ import random
 import subprocess
 import time
 
+subprocess.run(["./browser.sh"])
+
 time.sleep(10)
 
 counter=0
