@@ -14,3 +14,11 @@ if [ $1 = click ]; then
 	xdotool mousemove 262 303
 	xdotool click 1
 fi
+
+if [ $1 = kill ]; then
+	killall brave
+fi
+
+if [ $1 = start ]; then
+	brave &
+fi

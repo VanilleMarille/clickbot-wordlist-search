@@ -21,13 +21,20 @@ while True:
     random_line=random.randint(1,number_of_lines)
     random_line=(random_line - 1)
     word=content[random_line]
-
+    
     print("Searching for: " + word)
     subprocess.run(["./xdotool.sh", "bar"])
     subprocess.run(["xdotool", "type", word ])
     subprocess.run(["./xdotool.sh", "click"])
     
+    random_reset=random.randint(1,15)
+    if random_reset == 2:
+    	subprocess.run(["./xdotool.sh", "kill"])
+
     random_time=random.randint(5,100)
     print("Sleeping for: " +str(random_time))
+
+    if random_reset == 2:
+    	subprocess.run(["./xdotool.sh", "start"])
     
     time.sleep(random_time)
