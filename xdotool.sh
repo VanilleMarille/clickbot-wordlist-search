@@ -1,18 +1,25 @@
 #!/bin/bash
 
-if [ $1 = bar ]; then
-	xdotool mousemove 467 15
-	xdotool click 1
+function click {
+	sleep 0.2
+	xdotool mousedown 1
+	sleep 0.2
+	xdotool mouseup 1
 	sleep 3
-	xdotool key Control_L+l
-	sleep 1
+}
+
+if [ $1 = bar ]; then
+	xdotool mousemove 478 15
+	click
+	xdotool mousemove 560 40
+	click 
 fi
 
 if [ $1 = click ]; then
 	xdotool key Return
 	sleep 10
 	xdotool mousemove 262 303
-	xdotool click 1
+	click 
 fi
 
 if [ $1 = kill ]; then
